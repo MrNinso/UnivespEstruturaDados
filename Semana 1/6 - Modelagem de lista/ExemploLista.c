@@ -22,15 +22,8 @@ typedef struct {
     int nroElem;
 } LISTA;
 
-// Função que inicia a lista
-void iniciarLista(LISTA* l) {
-    l->nroElem = 0;
-}
-
-// Função que reinicia a lista para ser reutilizada
-void reiniciarLista(LISTA* l) {
-    l->nroElem = 0;
-}
+// Função que zera a lista
+void resetarLista(LISTA *l) { l->nroElem = 0; }
 
 // Função que retorna a quantidade de itens na lista
 int getSize(LISTA* l) {
@@ -112,13 +105,13 @@ int main() {
     // Adiciona uma seed para a geração de numeros aleatorios 
     srand((unsigned) &l);
 
-    iniciarLista(l);
+    resetarLista(l);
 
     // Loop que adiciona valores aleatorios a lista
     for (int i = 0; i < MAX; i++) {
         REGISTRO reg = {
-            chave: i,
-            valor: rand()
+            .chave = i,
+            .valor = rand()
         };
 
        if (!addRegistro(l, reg, getSize(l))) {
@@ -140,7 +133,7 @@ int main() {
     printf("Totalizando %i Registros \n", getSize(l));
 
     //Remove um item aleatorio
-    CHAVE chaveAleatotia = (rand() % 50);
+    CHAVE chaveAleatotia = (rand() % MAX);
 
     printf("Removendo item %i \n", chaveAleatotia);
 
@@ -154,7 +147,7 @@ int main() {
     printf("Agora temos %i registros \n", getSize(l));
 
     // Limpa a Lista
-    reiniciarLista(l);
+    resetarLista(l);
 
     printf("Lista reiniciada \n");
     exibirLista(l);

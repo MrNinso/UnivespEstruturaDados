@@ -22,6 +22,9 @@
 *.la
 *.lo
 
+#Erros
+core.a.out.*
+
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
@@ -37,6 +40,7 @@
 *.hex
 
 # Debug files
+*.theia/
 *.dSYM/
 *.su
 *.idb

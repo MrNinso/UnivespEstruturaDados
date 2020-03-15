@@ -19,7 +19,7 @@ int main() {
     int z = sizeof(int);
 
     // Printa os valores das variaveis
-    printf("y=%i *y=%i z=%i \n", y, *y, z);
+    printf("y=%i *y=%i z=%i \n",(int) y, *y, z);
 
     return 0;
 }

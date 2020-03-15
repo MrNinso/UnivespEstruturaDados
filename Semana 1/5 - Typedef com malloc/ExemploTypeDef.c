@@ -20,10 +20,10 @@ int main() {
     PesoAltura* pessoa1 = (PesoAltura*) malloc(sizeof(PesoAltura));
 
     // Printa a Posição na memoria de pessoa1
-    printf("Posição de pessoa1: %i \n", pessoa1);
+    printf("Posição de pessoa1: %i \n",(int) pessoa1);
 
     // Printa quanto em bytes foi alocado para pessoa1
-    printf("Ocupando %i bytes \n", sizeof(PesoAltura));
+    printf("Ocupando %i bytes \n",(int) sizeof(PesoAltura));
 
     //Coloca os valores nos campos
     pessoa1->peso = 80;

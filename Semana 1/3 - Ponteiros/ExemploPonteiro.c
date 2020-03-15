@@ -15,7 +15,7 @@ int main() {
     int* y = &x;
 
     // Printa qual é a posição salva no y
-    printf("A posição de x na memoria é: %i \n", y);
+    printf("A posição de x na memoria é: %i \n",(int) y);
 
     // Usando o ponteiro modificamos o valor de x sem precisar chamalo
     *y = 30;
