@@ -79,7 +79,7 @@ bool addRegistro(LISTA* l, REGISTRO registro, int pos) {
 }
 
 // Função que remove um registro usando uma chave para determinar
-bool removeRegistro(LISTA* l, CHAVE chave) {
+bool removerRegistro(LISTA* l, CHAVE chave) {
     int pos, j;
 
     // Procura a posição do item a ser removido
@@ -137,7 +137,7 @@ int main() {
 
     printf("Removendo item %i \n", chaveAleatotia);
 
-    if (!removeRegistro(l, chaveAleatotia)) {
+    if (!removerRegistro(l, chaveAleatotia)) {
         printf(
             "Erro ao remover item de chave %i \n",
             chaveAleatotia
